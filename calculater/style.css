@@ -1,3 +1,10 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .wraper{
     width: 500px;
     height: 700px;
@@ -17,7 +24,6 @@
     justify-content: end;
 }
 .intract{
-    background-color: rgb(127, 133, 133);
     font-size: 60px;
 }
 .intermdiate{
@@ -64,6 +70,5 @@
         width: 380px;
         height: 700px;
         border: solid;
-        margin-top: 20%;
     }
 }

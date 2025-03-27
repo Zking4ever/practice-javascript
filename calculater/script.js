@@ -11,13 +11,6 @@ for(var i=1; i<btn.length-1;i++){
         out.innerHTML += this.innerHTML;
     });
 }
-// detect operation btns
-for(var j=0;j<oprbtn.length;j++){
-    oprbtn[j].addEventListener('click',function(){
-
-       inter.innerHTML ="whats going on?";
-   });
-}
 //comput result func
 equal.addEventListener('click',function(){
     var givenInputes = out.innerHTML;
