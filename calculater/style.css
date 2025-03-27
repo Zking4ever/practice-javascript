@@ -1,11 +1,26 @@
 .wraper{
     width: 500px;
     height: 700px;
-    background-color: azure;
+    border: solid;
+}
+.display{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+.intract{
+    background-color: rgb(127, 133, 133);
+    height: 30%;
+}
+.intermdiate{
+    background-color: rgb(14, 17, 17);
+    height: 30%;
+    color: aliceblue;
 }
 .btns{
     height: 60%;
-    background-color: black;
     display: flex;
 }
 .numbers{
