@@ -10,14 +10,20 @@
     justify-content: end;
 
 }
+.display div{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 .intract{
     background-color: rgb(127, 133, 133);
-    height: 30%;
+    font-size: 60px;
 }
 .intermdiate{
     background-color: rgb(14, 17, 17);
-    height: 30%;
     color: aliceblue;
+    font-size: 50px;
 }
 .btns{
     height: 60%;
