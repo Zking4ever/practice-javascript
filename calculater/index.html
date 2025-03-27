@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+<body>
+    <input type="text">
+    <input type="text">
+    <button>Concatnet</button>
+<script>
+    var inp = document.getElementsByTagName('input');
+    var btn = document.getElementsByTagName('button')[0];
+    btn.addEventListener('click',function(){
+            var result = inp[0].value+inp[1].value;
+            result = parseInt(result);
+            result*=2;
+            alert(result);
+    });
+</script>
+</body>
+</html>
