@@ -5,7 +5,7 @@
   var inter =document.getElementsByClassName('intermdiate')[0];
  
 //accept numbers for each
-for(var i=0; i<btn.length-1;i++){
+for(var i=1; i<btn.length-1;i++){
         
     btn[i].addEventListener('click',function(){
         out.innerHTML += this.innerHTML;
@@ -40,8 +40,10 @@ equal.addEventListener('click',function(){
                         break;
             }
 
-
         }
     }
-
+});
+//clear everything fun
+btn[0].addEventListener('click',function(){
+    out.innerHTML ="";
 });

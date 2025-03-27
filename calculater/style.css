@@ -59,3 +59,11 @@
 .manipulater button:nth-child(4){
     height: 40%;
 }
+@media (max-width:760px) {
+    .wraper{
+        width: 380px;
+        height: 700px;
+        border: solid;
+        margin-top: 20%;
+    }
+}
