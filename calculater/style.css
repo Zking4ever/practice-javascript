@@ -67,8 +67,14 @@ body{
 }
 @media (max-width:760px) {
     .wraper{
-        width: 380px;
-        height: 700px;
+        width: 350px;
+        height: fit-content;
         border: solid;
+    }
+    .display{
+        height: 210px;
+    }
+    .btns{
+        height: 420px;
     }
 }
