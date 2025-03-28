@@ -39,10 +39,10 @@ button{
 #stop:hover{
     background-color: rgb(255, 4, 4);
 }
-#restart{
+#reset{
     background-color: rgba(10, 35, 177, 0.795);
 }
-#restart:hover{
+#reset:hover{
     background-color: rgba(78, 101, 236, 0.699);
 }
 @media (max-width:760px) {
