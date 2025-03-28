@@ -2,13 +2,15 @@
   var oprbtn =document.getElementsByClassName('op');
   var equal = document.getElementById('comput');
   var out =document.getElementsByClassName('intract')[0];
-  var inter =document.getElementsByClassName('intermdiate')[0];
  
 //accept numbers for each
 for(var i=1; i<btn.length-1;i++){
         
     btn[i].addEventListener('click',function(){
-        out.innerHTML += this.innerHTML;
+
+        if(this.id !="back"){
+            out.innerHTML += this.innerHTML;
+        }
     });
 }
 //comput result func
@@ -46,4 +48,15 @@ equal.addEventListener('click',function(){
 //clear everything fun
 btn[0].addEventListener('click',function(){
     out.innerHTML ="";
+});
+//back to cancle one digit
+btn[15].addEventListener('click',function(){
+     var existingString = out.innerHTML;
+     var remainingString ="";
+     existingString=existingString.split("");
+     existingString.pop();
+     for(var i=0; i <existingString.length;i++){
+          remainingString+= existingString[i];
+     }
+     out.innerHTML =remainingString;
 });
