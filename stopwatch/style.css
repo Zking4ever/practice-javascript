@@ -1,10 +1,11 @@
 body{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;  
 }
 #heading{
     font-size: 3rem;
+    margin-top: 90px;
 }
 #container{
     border: 5px solid;
@@ -24,6 +25,7 @@ button{
     border: none;
     border-radius: 10px;
     color: white;
+    transition: background-color 0.4s ease;
 }
 #start{
     background-color: green;
@@ -32,14 +34,41 @@ button{
     background-color: rgb(34, 233, 34);
 }
 #stop{
-    background-color: rgb(128, 0, 0);
+    background-color: rgb(155, 27, 27);
 }
 #stop:hover{
-    background-color: rgb(243, 52, 52);
+    background-color: rgb(255, 4, 4);
 }
 #restart{
-    background-color: rgba(0, 19, 128, 0.699);
+    background-color: rgba(10, 35, 177, 0.795);
 }
 #restart:hover{
     background-color: rgba(78, 101, 236, 0.699);
+}
+@media (max-width:760px) {
+    body{
+        height: 100vh;
+        justify-content: center;  
+    }
+    #heading{
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+    div{
+        margin: 20px;
+    }
+    #display{
+        font-size: 3rem;
+        margin: 30px;
+        text-align: center;
+    }
+    button{
+        padding: 5px 20px;
+    }
+    #stop{
+        background-color: rgb(243, 52, 52);
+    }
+    #restart{
+        background-color: rgba(78, 101, 236, 0.699);
+    }
 }
