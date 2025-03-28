@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#heading{
+    font-size: 3rem;
+}
+#container{
+    border: 5px solid;
+    border-radius: 50px;
+}
+#display{
+    font-size: 5rem;
+    margin: 50px;
+}
+#btns{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+button{
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+#start{
+    background-color: green;
+}
+#start:hover{
+    background-color: rgb(34, 233, 34);
+}
+#stop{
+    background-color: rgb(128, 0, 0);
+}
+#stop:hover{
+    background-color: rgb(243, 52, 52);
+}
+#restart{
+    background-color: rgba(0, 19, 128, 0.699);
+}
+#restart:hover{
+    background-color: rgba(78, 101, 236, 0.699);
+}
