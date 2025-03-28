@@ -1,5 +1,4 @@
  var btn =document.getElementsByTagName('button');
-  var oprbtn =document.getElementsByClassName('op');
   var equal = document.getElementById('comput');
   var out =document.getElementsByClassName('intract')[0];
  
@@ -10,6 +9,12 @@ for(var i=1; i<btn.length-1;i++){
 
         if(this.id !="back"){
             out.innerHTML += this.innerHTML;
+        }
+        if(this.className =="op"){
+            var string = out.innerHTML.split("");
+            if(string.length ==1){
+                out.innerHTML ="";
+            }
         }
     });
 }
