@@ -57,7 +57,7 @@ button{
     top: 5%;
     right: 10%;
     z-index: 1;
-
+    cursor: pointer;
 }
 @media (max-width:760px) {
     body{

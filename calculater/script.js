@@ -65,3 +65,7 @@ btn[15].addEventListener('click',function(){
      }
      out.innerHTML =remainingString;
 });
+
+function goBack() {
+    window.history.back();
+}

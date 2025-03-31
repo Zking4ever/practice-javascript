@@ -47,3 +47,6 @@ _('reset').addEventListener('click',function(){
     isRunning =false;
     clearInterval(intervalId);
 })
+function goBack() {
+    window.history.back();
+}
