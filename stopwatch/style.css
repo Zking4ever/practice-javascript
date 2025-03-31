@@ -46,6 +46,19 @@ button{
 #reset:hover{
     background-color: rgba(78, 101, 236, 0.699);
 }
+.home{
+    color: rgb(240, 234, 234);
+    background-color: black;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 23px;
+    position: absolute;
+    border-radius: 7px;
+    top: 5%;
+    right: 10%;
+    z-index: 1;
+
+}
 @media (max-width:760px) {
     body{
         height: 100vh;

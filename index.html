@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .center{
+            width: 50%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .center a{
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 80px;
+            border: 5px solid;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        @media (max-width:760px) {
+            .center a{
+                font-size: 40px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <a href="calculater/index.html">Calculater</a>
+        <a href="stopwatch/index.html">Stopwatch</a>
+    </div>
+    
+</body>
+</html>

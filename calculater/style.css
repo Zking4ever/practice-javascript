@@ -65,6 +65,19 @@ body{
 .manipulater button:nth-child(4){
     height: 40%;
 }
+.home{
+    color: rgb(240, 234, 234);
+    background-color: black;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 23px;
+    position: absolute;
+    border-radius: 7px;
+    top: 5%;
+    right: 10%;
+    z-index: 1;
+
+}
 @media (max-width:760px) {
     .wraper{
         width: 350px;
