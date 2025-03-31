@@ -26,10 +26,16 @@ _('stop').addEventListener('click',function(){
 
 function update(){
     elapseTime = Date.now() - startTime;
-    elapseTimeInSecond = Math.floor(elapseTime / (1000))%60;
-    elapseTimeInMinute = Math.floor(elapseTime / (1000*60))%60;
+    elapseTimeInSecond = Math.floor(elapseTime / 1000 % 60);
+    elapseTimeInMinute = Math.floor(elapseTime / (1000*60)%60);
     elapseTimeInHour = Math.floor(elapseTime / (1000*60*60));
-    _('display').innerHTML = elapseTimeInHour +":"+ elapseTimeInMinute +":"+ elapseTimeInSecond+":"+elapseTime;
+    elapseTimeInMiliseconds = Math.floor(elapseTime % 1000 / 10);
+
+    elapseTimeInHour = String(elapseTimeInHour).padStart(2, "0" );
+    elapseTimeInMinute =String(elapseTimeInMinute).padStart(2, "0");
+    elapseTimeInSecond =String(elapseTimeInSecond).padStart(2, "0");
+    _('display').textContent = `${elapseTimeInHour}:${elapseTimeInMinute}:${elapseTimeInSecond}:${elapseTimeInMiliseconds}`;
+   // _('display').innerHTML = elapseTimeInHour +":"+ elapseTimeInMinute +":"+ elapseTimeInSecond+":"+elapseTimeInMiliseconds;
 }
 
 //function to restart

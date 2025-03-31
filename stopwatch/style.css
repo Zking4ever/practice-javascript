@@ -10,6 +10,7 @@ body{
 #container{
     border: 5px solid;
     border-radius: 50px;
+    width: 500px;
 }
 #display{
     font-size: 5rem;
@@ -49,6 +50,9 @@ button{
     body{
         height: 100vh;
         justify-content: center;  
+    }
+    #container{
+        width: 300px;
     }
     #heading{
         margin-bottom: 15px;
