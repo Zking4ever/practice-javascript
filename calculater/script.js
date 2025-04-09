@@ -43,7 +43,7 @@ equal.addEventListener('click',function(){
                             dividedStrs[4].push('1');
                          }
                         result = parseFloat(dividedStrs[4][0])/100 * parseFloat(dividedStrs[4][1]);
-                        out.innerHTML =+result;
+                        out.innerHTML =result;
                         break;
             }
 
