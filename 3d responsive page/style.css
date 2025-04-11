@@ -8,36 +8,39 @@
 .container{
     width: 130vh;
     height: 85vh;
-    display: block;
-    background-color: rgb(145, 156, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: rotating3D 4s ease infinite;
+    transform-origin: 50% 50%;
 }
 .slider{
-    width: 100%;
+    width: 400px;
     height: 50%;
     top: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 300px;
+    justify-content: space-between;
     transform-style: preserve-3d;
-    transform: perspective(400px) translateY(-50%) rotateX(15deg);
-    position: relative;
-    animation: rotating3D 6s ease infinite;
+    transform:rotateY(calc(var(--s)*45deg));
+    position: absolute;
 }
 @keyframes rotating3D {
     0%{
-        transform: perspective(400px) translateY(-50%) rotateX(15deg);
+        transform: rotateY(0deg);
     } 
-    50%{
-        transform: perspective(400px) translateY(-50%) rotateX(45deg) rotateY(360deg);
+    100%{
+        transform: rotateX(45deg) rotateY(360deg);
     }
     
 }
 .item{
     width: 210px;
     height:210px;
-    position: absolute;
     background-color: black;
-    transform:  rotateY(calc(var(--i) *calc(360deg/var(--quatity)))) ;
+    transform: rotateY(90deg);
 }
 .item:nth-child(1){
     background-color: blue;
