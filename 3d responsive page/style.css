@@ -19,14 +19,28 @@
     align-items: center;
     justify-content: center;
     transform-style: preserve-3d;
-    transform: perspective(400px) translateY(-50%);
+    transform: perspective(400px) translateY(-50%) rotateX(15deg);
     position: relative;
+    animation: rotating3D 6s ease infinite;
+}
+@keyframes rotating3D {
+    0%{
+        transform: perspective(400px) translateY(-50%) rotateX(15deg);
+    } 
+    50%{
+        transform: perspective(400px) translateY(-50%) rotateX(45deg) rotateY(360deg);
+    }
+    
 }
 .item{
     width: 210px;
     height:210px;
+    position: absolute;
     background-color: black;
-    transform: translateX(calc(var(--i)*30px)) translateZ(calc(var(--i)*30px)) rotateX(calc(var(--i) *calc(360deg/var(--quatity))));
+    transform:  rotateY(calc(var(--i) *calc(360deg/var(--quatity)))) ;
+}
+.item:nth-child(1){
+    background-color: blue;
 }
 .item:nth-child(3n){
     background-color: aquamarine;
