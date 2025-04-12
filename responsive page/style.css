@@ -15,9 +15,8 @@ nav{
     display: flex;
     gap: 50px;
 }
-.body{
+.bodydiv{
     height: 90%;
-    background-color: rgb(177, 174, 174);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,14 +30,11 @@ nav{
 .item{
     width: 200px;
     height: 400px;
-    position: absolute;
-    left: 50%;
     font-size: 68px;
     text-align: center;
     align-content: center;
     border: 3px solid;
     border-radius: 15px;
-    transform: translateX(calc(var(--j)*300px)) translateZ(-300px);
 }
 #current{
     background-color: red;

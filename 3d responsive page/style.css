@@ -12,11 +12,11 @@
     flex-direction: column;
     align-items: center;
     transform-style: preserve-3d;
-    animation: rotating3D 20s ease infinite;
     transform-origin: 50% 50%;
+    animation: rotating3D 40s ease infinite;
 }
 .slider{
-    width: 900px;
+    width: 1200px;
     height: 50%;
     top: 50%;
     display: flex;
@@ -32,16 +32,22 @@
         transform: rotateY(0deg);
     } 
     100%{
-        transform: rotateX(45deg) rotateY(360deg);
+        transform: rotateX(45deg) rotateY(-360deg);
     }
     
 }
 .item{
-    width: 30%;
+    width: 300px;
     height:210px;
     background-color: black;
-    transform: rotateY(90deg);
+    text-align: center;
+    font-size: 50px;
+    color: aliceblue;
 }
 .item:nth-child(1){
     background-color: blue;
+    transform: rotateY(-90deg);
+}
+.item:nth-child(2){
+    transform: rotateY(90deg);
 }

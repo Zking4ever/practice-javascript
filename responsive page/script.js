@@ -1,10 +1,12 @@
 var item = document.getElementsByClassName("item");
+var container = document.getElementsByClassName("container")[0];
 var currentPosition;
 
 for(var i=0;i<item.length;i++){
     item[i].addEventListener('click',function(){
-        currentPosition= currentPointerCounter(this);
+        currentPosition = currentPointerCounter(this);
         clearId(); // to mark only the current id
+        arrange();
         this.id ="current";
     });
 }
@@ -19,13 +21,11 @@ function currentPointerCounter(e){
 function clearId(){
     for(var i=0;i<item.length;i++){
         item[i].removeAttribute('id');
-        arrange();
     }
 }
 function arrange(){
     for(var i=0;i<item.length;i++){
-        item[i].style.transform ="";
-        item[i].style.transform ="translateX(calc(var(--i)*100px)) translateZ(-300px)";
+        container.style.transform= "translateX("+currentPosition+"00px)";
         item[i].innerHTML = currentPosition;
     }
 }
