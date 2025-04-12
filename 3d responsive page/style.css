@@ -12,11 +12,11 @@
     flex-direction: column;
     align-items: center;
     transform-style: preserve-3d;
-    animation: rotating3D 4s ease infinite;
+    animation: rotating3D 20s ease infinite;
     transform-origin: 50% 50%;
 }
 .slider{
-    width: 400px;
+    width: 900px;
     height: 50%;
     top: 50%;
     display: flex;
@@ -37,17 +37,11 @@
     
 }
 .item{
-    width: 210px;
+    width: 30%;
     height:210px;
     background-color: black;
     transform: rotateY(90deg);
 }
 .item:nth-child(1){
     background-color: blue;
-}
-.item:nth-child(3n){
-    background-color: aquamarine;
-}
-.item:nth-child(4n){
-    background-color: rgb(146, 109, 64);
 }
