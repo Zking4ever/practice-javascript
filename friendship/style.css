@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+    color: azure;
+    font-family:fantasy;
+    font-size: 30px;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    background-image: linear-gradient(rgb(128, 128, 128,0.5),rgb(116, 91, 91)), url("ui/kali.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+#greet{
+    font-size: 50px;
+}
+.home h1{
+    font-size: 100px;
+    margin: 0px;
+}
+#join{
+    background-color: wheat;
+    padding: 12px 45px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#join:hover{
+    background-color: rgb(18, 19, 19);
+    color: azure;
+    padding: 15px 70px;
+}
+#fr-ship{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+#fr-ship p{
+    max-width: 700px;
+    font-size: 23px;
+    margin: 15px 20px;
+}
+.members_container{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    transition: all 1s ease;
+}
+.members_container:hover{
+    border:solid rgb(126, 118, 118);
+    border-radius: 15px;
+    padding: 10px;
+}
+#members{
+    padding: 50px;
+}
+.member{
+    max-width: 600px;
+    aspect-ratio: 3.5;
+    border: solid thin;
+    display: flex;
+}
+.member img{
+    width: 30%;
+}
+.member_info{
+    width: 70%;
+    align-content: center;
+}
+.member_detail{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 10px;
+}
+.member_detail .name{
+    font-size: 40px;
+    padding-bottom: 0px;
+}
+.engagments{
+    width: 40%;
+    aspect-ratio: 5;
+    padding-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:760px) {
+    #logo{
+        font-size: 24px;
+    }
+    .home{
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #greet{
+        font-size: 50px;
+    }
+    #join{
+        padding: 12px 45px;
+        margin: 20px;
+    }
+    
+}

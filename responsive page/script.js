@@ -13,7 +13,22 @@ for(var i=0;i<item.length;i++){
 function currentPointerCounter(e){
     for(var i=0;i<item.length;i++){
         if(e==item[i]){
-            return i;
+            switch(i){
+                case 0: return 7;
+                           break;
+                case 1: return 5;
+                  break;
+                case 2: return 3;
+                    break;
+                case 3: return 0;
+                      break;
+                case 4: return -3;
+                        break;
+                case 5: return -5;
+                          break;
+                case 6: return -7;
+                         break;
+            }
         }
     }
 
@@ -25,7 +40,27 @@ function clearId(){
 }
 function arrange(){
     for(var i=0;i<item.length;i++){
-        container.style.transform= "translateX("+currentPosition+"00px)";
-        item[i].innerHTML = currentPosition;
+        container.style.transform= "translateX("+currentPosition+"00px)"; 
+       var interm=[]; //array to contain items to move or to append and deappend
+        switch(currentPosition){
+            case 7:  for(var i=3;i<item.length;i++){
+                            interm[i]=item[i];
+                            container.removeChild(item[i]);
+                     }
+                     container.innerHTML = interm[1]+container.innerHTML;
+                       break;
+            case 5: return 5;
+              break;
+            case 3: return 3;
+                break;
+            case 0: return 0;
+                  break;
+            case 4: return -3;
+                    break;
+            case 5: return -5;
+                      break;
+            case 6: return -7;
+                     break;
+        }
     }
 }

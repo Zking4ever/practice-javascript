@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .devices{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .outer{
+            width: 53px;
+            height: 75px;
+            position: absolute;
+            animation: outer 10s ease ;
+            border: solid;
+            border-radius: 5px;
+        }
+        .inner{
+            width: 45px;
+            height: 65px;
+            animation: inner 10s ease ;
+            border: solid thin;
+            border-radius: 5px;
+        }
+        .side{
+            animation: side 10s ease;
+        }
+        h1.first{
+            position: absorelute;
+            transform: translateY(200px);
+        }
+        
+        h1.second{
+            position: absorelute;
+            transform: translateY(600px);
+        }
+        @keyframes outer {
+            25%{
+                width: 300px;
+                height: 250px;
+                transform: translateX(0);
+                border: solid;
+            }
+            50%{
+                width: 170px;
+                height: 180px;
+                transform: translateX(0);
+                border: solid thin;
+
+            }
+            75%{
+                width: 150px;
+                transform: translateX(-100px);
+            }
+            100%{
+            width: 53px;
+            height: 75px;
+
+            }
+            
+        }
+        @keyframes inner {
+            25%{
+                transform: translateY(160px);
+                height: 30px;
+                width: 45px;
+            }
+            35%{
+                transform: translateY(0);
+            }
+            50%{
+                width: 200px;
+                height: 200px;
+                border: solid;
+                transform: translateY(0);
+            }
+            75%{
+                width: 200px;
+                transform: translate(-50px,110px);
+                border-radius: 0;
+                border: solid thin;
+            }
+            100%{
+                width: 50px; 
+            }
+        }
+        @keyframes side {
+            50%{
+            width: 0;
+            height: 0;
+            border:0cap;
+            }
+            75%{
+                width: 150px;
+                height: 300px;
+                border: solid;
+            }
+            100%{
+            width: 0;
+            height: 0;
+
+            }
+            
+        }
+
+        /*circles styling*/
+        .circles{
+            position: absolute;
+            transform: translateY(400px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+        }
+        .circle{
+            border: solid thin;
+            position: absolute;
+            border-radius:calc(var(--i)*15px);
+            width:calc(var(--i)*30px);
+            height:calc(var(--i)*30px);
+        }
+        .circles .circle{
+            animation: circle 5s ease infinite;
+        }
+        @keyframes circle {
+            50%{
+                transform: rotateX(calc(var(--i)*50deg)) ;
+            }
+        }
+        .circles2{
+            position: absolute;
+            transform: translateY(800px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circles2 .circle{
+            animation: circle2 5s ease infinite;
+        }
+        @keyframes circle2 {
+            50%{
+                transform: translateX(calc(var(--i)*50px)) ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="devices">
+        <div class="outer"></div>
+        <div class="inner"></div>
+        <div class="side"></div>
+    </div>
+    <h1 class="first">Devices</h1><br>
+    <br>
+    <div class="circles">
+        <div class="circle" style="--i:1"></div>
+        <div class="circle" style="--i:2"></div>
+        <div class="circle" style="--i:3"></div>
+        <div class="circle" style="--i:4"></div>
+        <div class="circle" style="--i:5"></div>
+        <div class="circle" style="--i:6"></div>
+        <div class="circle" style="--i:7"></div>
+    </div>
+    <div class="circles2">
+        <div class="circle" style="--i:1"></div>
+        <div class="circle" style="--i:2"></div>
+        <div class="circle" style="--i:3"></div>
+        <div class="circle" style="--i:4"></div>
+        <div class="circle" style="--i:5"></div>
+        <div class="circle" style="--i:6"></div>
+        <div class="circle" style="--i:7"></div>
+    </div>
+    
+    <h1 class="second">Animating circles</h1>
+    <div class="practice">
+        <div class="circle"style="--i:1; --j:7"></div>
+        <div class="circle"style="--i:2;--j:6"></div>
+        <div class="circle"style="--i:3;--j:5"></div>
+        <div class="circle"style="--i:4;--j:4"></div>
+        <div class="circle"style="--i:5;--j:3"></div>
+        <div class="circle"style="--i:6;--j:2"></div>
+        <div class="circle"style="--i:7;--j:1"></div>
+    </div>
+    <style>
+        .practice{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+		position:absolute;
+		transform:translateY(1000px);
+        }
+        .practice .circle{
+            transform: rotateX(100deg);
+            border: solid thick;
+            animation: circle3 5s ease infinite;
+        }
+        @keyframes circle3{
+            30%{
+                transform: translateY(calc(var(--j)*-10px))  rotateX(100deg);
+            }
+            60%{
+                transform: translateY(calc(var(--j)*5px))  rotateX(100deg);
+            }
+        }
+    </style>
+</body>
+</html>
