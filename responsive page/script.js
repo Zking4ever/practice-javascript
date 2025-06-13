@@ -15,7 +15,6 @@ function getIndex(obj){
     }
 }
 function sort(current){
-    clearStyle();
     if(current<3){
         for(var i=0;i<=current+3;i++){
             var temp = item[0];
@@ -30,11 +29,11 @@ function sort(current){
             container.appendChild(temp);
         }
     }
-    item[3].style.backgroundColor = "red";
 }
 function clearStyle(){
     for(var i=0;i<item.length;i++){
-        item[i].style.backgroundColor = "white";
+        item[i].style.backgroundColor = "azure";
+        item[i].style.width = "100px";
     }
 }
 /*
