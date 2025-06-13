@@ -1,15 +1,43 @@
 var item = document.getElementsByClassName("item");
 var container = document.getElementsByClassName("container")[0];
-var currentPosition;
+
 
 for(var i=0;i<item.length;i++){
     item[i].addEventListener('click',function(){
-        currentPosition = currentPointerCounter(this);
-        clearId(); // to mark only the current id
-        arrange();
-        this.id ="current";
+        sort(getIndex(this));
     });
 }
+function getIndex(obj){
+    for(var i=0;i<item.length;i++){
+        if(item[i]==obj){
+            return i;
+        }
+    }
+}
+function sort(current){
+    clearStyle();
+    if(current<3){
+        for(var i=0;i<=current+3;i++){
+            var temp = item[0];
+            container.removeChild(temp);
+            container.appendChild(temp);
+         }
+    }
+    else if(current>3){
+        for(var i=0;i<=current-4;i++){
+            var temp = item[0];
+            container.removeChild(temp);
+            container.appendChild(temp);
+        }
+    }
+    item[3].style.backgroundColor = "red";
+}
+function clearStyle(){
+    for(var i=0;i<item.length;i++){
+        item[i].style.backgroundColor = "white";
+    }
+}
+/*
 function currentPointerCounter(e){
     for(var i=0;i<item.length;i++){
         if(e==item[i]){
@@ -64,3 +92,4 @@ function arrange(){
         }
     }
 }
+*/
