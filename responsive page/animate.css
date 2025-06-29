@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wraper{
+    width: px;
+    height: 100vh;
+    background-color: azure;
+
+}
+.header{
+    height: 10%;
+    border: 3px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{
+    display: flex;
+    gap: 50px;
+}
+.bodydiv{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.item{
+    width: 100px;
+    height: 200px;
+    font-size: 68px;
+    text-align: center;
+    align-content: center;
+    border: 3px solid;
+    border-radius: 15px;
+    height: 170px;
+    overflow: hidden;
+    transition: left 1s ease,width 1s ease,height 1s ease,opacity .5s ease;;
+    position: absolute;
+    transform: translateX(-50%);
+}
+.c1{
+    width: 50px;
+    height: 100px;
+    left: 7%;
+}
+.c2{
+    width: 80px;
+    height: 120px;
+    left: 18%;
+}
+.c3{
+    width: 110px;
+    height: 150px;
+    left: 30%;
+}
+.c4{
+    width: 200px;
+    height: 240px;
+    left: 50%;
+}
+.c5{
+    width: 110px;
+    height: 150px;
+    left: 70%;
+}
+.c6{
+    width: 80px;
+    height: 120px;
+    left: 82%;
+}
+.c7{
+    width: 50px;
+    height: 100px;
+    left: 93%;
+}
+
+.img img{
+    max-width: 100%;
+}
+#current{
+    background-color: red;
+    width: 600px;
+    height: 500px;
+}
