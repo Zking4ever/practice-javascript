@@ -24,6 +24,28 @@ body:has(option[value="dark"]:checked){
     padding: 30px; 
     border-radius: 50%;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:nth-child(1):hover ~ .about{
+    display: block;
+}
+#who:hover ~ .who{
+    display: block;
+}
+.about,.who{
+    width: 400px;
+    padding: 30px 10px;
+    background-color: rgb(156, 167, 167);
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 55px;
+    border: solid thin gray;
+    z-index: 10;
+    display: none;
+}
 </style>
 </head>
 <body>
@@ -35,10 +57,12 @@ body:has(option[value="dark"]:checked){
             <div class="logo">AS practical</div>
             <nav>
                 <a href="#about">About</a>
-                <a href="#projects">Practice Page</a>
+                    <div class="about">This is a practice page to write down different algorithm of swapping/scrolling/switching between items infinitly</div>
+                <a href="#projects" id="who">Who</a>
+                    <div class="who"> This is Astawus Amsalu, a programming enthusiast who love to write algorithm and solve problems. He is doing this to skill up his abilities while having fun writing some messing algorithm which usually end doing miracles. check out his Gitub: @Zking4ever<br>linkdoneName: Astawus Amsalu<br> telegram: @astawus1 </div>
             </nav>
             <div>
-                <select name="theam">
+                <select name="theame">
                     <option value="day">Day mode</option>
                     <option value="dark">Dark mode</option>
                 </select>
@@ -47,14 +71,18 @@ body:has(option[value="dark"]:checked){
             <div>
 
                 <select id="scrollType" style="position: absolute;top: 80px; right: 30px;">
-                    <option value="1">Animated infinite scroll</option>
-                    <option value="2">Js algorithm by removing and appending</option>
+                    <option value="1">Animated scroll using buttons</option>
+                    <option value="2">Scrolling through items by clicking</option>
                 </select>
 
-                    <button onclick="moveL()" id="lbtn"> </button>
-                    <button onclick="moveR()" id="rbtn"> </button>
+                    <button onclick="moveL()" id="lbtn"> < </button>
+                    <button onclick="moveR()" id="rbtn"> > </button>
             </div>
         <div class="bodydiv">
+            <div style="text-align: center;">
+                <h1>Infinite Scroll Practice</h1>
+                Two ways of scoll are added. Use the dropdown to select what comfort you.
+            </div>
             <div class="container">
                 <div class="item c1">
                     <div class="img"><img src="images/Screenshot (12).png"></div>
@@ -86,6 +114,7 @@ body:has(option[value="dark"]:checked){
                 </div>
             </div>
         </div>
+        <div style="position: absolute;bottom: 20px;left: 40%; font-size: 10px;">Made with ❤️ By Astawus Amsalu</div>
     </div>
 </body>
         <script src="animat.js" id="myscript"></script>
