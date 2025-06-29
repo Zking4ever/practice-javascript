@@ -7,6 +7,7 @@ for(var i=0;i<item.length;i++){
         sort(getIndex(this));
     });
 }
+alert("xonn")
 function getIndex(obj){
     for(var i=0;i<item.length;i++){
         if(item[i]==obj){

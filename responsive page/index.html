@@ -4,52 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="animate.css">
+<style>
+body:has(option[value="dark"]:checked){
+    background-color: black;
+    color: azure;
+}
+
+#lbtn{
+    position: absolute;
+     left: 25%;
+      top: 85%;
+      padding: 30px;
+      border-radius: 50%;
+}
+#rbtn{
+    position: absolute; 
+    right: 25%; 
+    top: 85%; 
+    padding: 30px; 
+    border-radius: 50%;
+}
+</style>
 </head>
 <body>
+    <div id="link_holder">
+        <link id="css" rel="stylesheet" href="animate.css">
+    </div>
     <div class="wraper">
         <div class="header">
-            <div class="logo">logo</div>
+            <div class="logo">AS practical</div>
             <nav>
                 <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
+                <a href="#projects">Practice Page</a>
             </nav>
+            <div>
+                <select name="theam">
+                    <option value="day">Day mode</option>
+                    <option value="dark">Dark mode</option>
+                </select>
+            </div>
         </div>
+            <div>
+
+                <select id="scrollType" style="position: absolute;top: 80px; right: 30px;">
+                    <option value="1">Animated infinite scroll</option>
+                    <option value="2">Js algorithm by removing and appending</option>
+                </select>
+
+                    <button onclick="moveL()" id="lbtn"> </button>
+                    <button onclick="moveR()" id="rbtn"> </button>
+            </div>
         <div class="bodydiv">
             <div class="container">
                 <div class="item c1">
                     <div class="img"><img src="images/Screenshot (12).png"></div>
-                    <div class="description">1</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel quo error.</div>
                 </div>
                 <div class="item c2">
                     <div class="img"><img src="images/Screenshot (13).png"></div>
-                    <div class="description">2</div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis unde modi molestias.</div>
                 </div>
                 <div class="item c3">
                     <div class="img"><img src="images/Screenshot (4).png"></div>
-                    <div class="description">3</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quam error voluptatum!</div>
                 </div>
                 <div class="item c4">
                     <div class="img"><img src="images/Screenshot (8).png"></div>
-                    <div class="description">4</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequuntur distinctio.</div>
                 </div>
                 <div class="item c5">
                     <div class="img"><img src="images/Screenshot (15).png"></div>
-                    <div class="description">5</div>
+                    <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit iusto perspiciatis explicabo.</div>
                 </div>
                 <div class="item c6">
                     <div class="img"><img src="images/Screenshot (14).png"></div>
-                    <div class="description">6</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus corporis porro!</div>
                 </div>
                 <div class="item c7">
                     <div class="img"><img src="images/Screenshot (2).png"></div>
-                    <div class="description">7</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vitae nostrum numquam.</div>
                 </div>
             </div>
-            <button onclick="move()">move</button>
         </div>
     </div>
 </body>
-<script src="animat.js"></script>
+        <script src="animat.js" id="myscript"></script>
+<script>
+    var link_holder = document.getElementById("link_holder");
+    var scrollType = document.getElementById("scrollType");
+    
+    scrollType.addEventListener('change',function(){
+            var css = document.getElementById('css');
+            var body = document.getElementsByTagName('body')[0];
+            var script = document.getElementById('myscript');
+            var lbtn = document.getElementById('lbtn');
+            var rbtn = document.getElementById('rbtn');
+
+            body.removeChild(script);
+        if(scrollType.value == 1){
+            css.href = "animate.css";
+            js = document.createElement('script');
+            js.id = "myscript";
+            js.src = "animat.js";
+            body.appendChild(js);
+            lbtn.style.display = "block";
+            rbtn.style.display = "block";
+        }else{
+            css.href = "style.css";
+            js = document.createElement('script');
+            js.id = "myscript";
+            js.src = "script.js";
+            body.appendChild(js);
+            lbtn.style.display = "none";
+            rbtn.style.display = "none";
+        }
+    });
+</script>
 </html>
