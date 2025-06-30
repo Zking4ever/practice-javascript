@@ -189,6 +189,10 @@ header label{
 }
 
 @media(max-width:760px) {
+    header{
+        width: 77%;
+        overflow: hidden;
+    }
     #logo{
         font-size: 24px;
     }
@@ -227,7 +231,10 @@ header label{
         width: 70px;
         padding: 10px 25px;
     }
-    #nav_bar_radio:checked ~ nav{
+    #nav_bar_radio:checked ~ header{
+        overflow: visible;
+    }
+    #nav_bar_radio:checked ~ header nav{
         right: 0;
     }
     nav{
@@ -257,5 +264,18 @@ header label{
     }
     #fr-ship p{
         font-size: 12px;
+    }
+    #members{
+        flex-direction: column-reverse;
+        gap: 200px;
+        align-items: center;
+    }
+    .member{
+        width: 250px;
+        font-size: small;
+    }
+    .members_container button{
+        padding: 0px 2px;
+        font-size: small;
     }
 }
