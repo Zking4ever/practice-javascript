@@ -2,6 +2,15 @@
     padding: 0;
     margin: 0;
 }
+body{
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+section{
+    width: 100vw;
+    position: relative;
+}
 header{
     height: 100px;
     background-color: rgba(0, 0, 0, 0.247);
@@ -12,17 +21,26 @@ header{
     right: 0;
     left: 0;
     top: 0;
+    z-index: 100;
 }
 nav{
     width: 50%;
     display: flex;
     justify-content: space-between;
+    transition: all 1s ease;
 }
 #logo{
     color: azure;
     font-family:fantasy;
     font-size: 30px;
 }
+a:hover{
+    color: rgb(7, 221, 244);
+}
+header label{
+    display: none;
+}
+
 .home{
     display: flex;
     justify-content: center;
@@ -36,12 +54,17 @@ nav{
 }
 #greet{
     font-size: 50px;
+    margin-top: 35px;
 }
 .home h1{
     font-size: 100px;
     margin: 0px;
 }
-#join{
+.home div h1:nth-child(2){
+    text-align: right; transform: translateY(-45px);
+}
+#join,
+#join2{
     background-color: wheat;
     padding: 12px 45px;
     margin: 20px;
@@ -49,45 +72,99 @@ nav{
     cursor: pointer;
     transition: all 0.5s ease;
 }
-#join:hover{
+#join:hover,
+#join2:hover{
     background-color: rgb(18, 19, 19);
     color: azure;
     padding: 15px 70px;
+}
+#join2{
+    margin: 100px;
+
 }
 #fr-ship{
     height: 60vh;
     display: flex;
     flex-direction: column;
+    padding: 49px;
 }
 #fr-ship p{
     max-width: 700px;
     font-size: 23px;
     margin: 15px 20px;
 }
+#members{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.memories{
+    width: fit-content;
+    text-align: center;
+    font-size: 28px;
+    transform: translateY(-170px);
+}
+.card{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    gap: 20px;
+    border: solid thin;
+    border-radius: 30px;
+    background-color: azure;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+}
+.moment{
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 350px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moment img{
+    width: 100%;
+}
 .members_container{
     width: fit-content;
+    height: 320px;
+    overflow: hidden;
+    padding: 3px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
     transition: all 1s ease;
-}
-.members_container:hover{
     border:solid rgb(126, 118, 118);
     border-radius: 15px;
-    padding: 10px;
+    z-index: 19;
+    position: relative;
 }
-#members{
-    padding: 50px;
+.members_container button{
+    position: absolute;
+    bottom: 2px;
+    font-size: 22px;
+    padding: 3px 13px;
+    }
+#see_less{
+    right: 20%;
+    display: none;
 }
 .member{
-    max-width: 600px;
+    max-width: 500px;
     aspect-ratio: 3.5;
     border: solid thin;
     display: flex;
 }
 .member img{
     width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 5px;
 }
 .member_info{
     width: 70%;
@@ -100,7 +177,7 @@ nav{
     padding-left: 10px;
 }
 .member_detail .name{
-    font-size: 40px;
+    font-size: 30px;
     padding-bottom: 0px;
 }
 .engagments{
@@ -115,6 +192,9 @@ nav{
     #logo{
         font-size: 24px;
     }
+    header label{
+        display: block;
+    }
     .home{
         height: 90vh;
         display: flex;
@@ -122,12 +202,60 @@ nav{
         align-items: center;
         flex-direction: column;
     }
+    .home div h1{
+        font-size: 40px;
+        text-align: center;
+        transform: translateX(-20%);
+    }
+    .home div h1:nth-child(1){
+        transform: translateY(5px) translateX(-10%);
+    }
+    .home div h1:nth-child(2){
+        transform: translateY(-5px) translateX(-30%);
+    }
     #greet{
-        font-size: 50px;
+        font-size: 30px;
     }
     #join{
         padding: 12px 45px;
         margin: 20px;
     }
-    
+    #join2{
+        width: 70px;
+        padding: 5px 25px;
+    }#join2:hover{
+        width: 70px;
+        padding: 10px 25px;
+    }
+    #nav_bar_radio:checked ~ nav{
+        right: 0;
+    }
+    nav{
+        width: 150px;
+        height: 93vh;
+        padding-top: 7vh;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: -160px;
+        color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    nav label{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    nav label:hover{
+       color: red;
+    }
+    #fr-ship{
+        padding: 28px;
+    }
+    #fr-ship p{
+        font-size: 12px;
+    }
 }
