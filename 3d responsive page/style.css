@@ -16,7 +16,7 @@
     animation: rotating3D 40s ease infinite;
 }
 .slider{
-    width: 1200px;
+    width: 700px;
     height: 50%;
     top: 50%;
     display: flex;
@@ -37,17 +37,85 @@
     
 }
 .item{
-    width: 300px;
-    height:210px;
+    width: 200px;
+    height:110px;
     background-color: black;
     text-align: center;
     font-size: 50px;
     color: aliceblue;
 }
-.item:nth-child(1){
-    background-color: blue;
+body:has(option[value="ring"]:checked) > .wraper .container .slider .item:nth-child(1){
     transform: rotateY(-90deg);
 }
-.item:nth-child(2){
+body:has(option[value="ring"]:checked) > .wraper .container .slider .item:nth-child(2){
     transform: rotateY(90deg);
+}
+body:has(option[value="wheal"]:checked) > .wraper .container .slider{
+    background-color: black;
+    border: solid wheat;
+}
+body:has(option[value="wheal"]:checked) > .wraper .container{
+   animation: rotating3D 20s ease infinite;
+}
+body:has(option[value="flower"]:checked) > .wraper .container .slider{
+    width: 300px;
+    gap: unset;
+    align-items: center;
+    height: fit-content;
+    background-color: rgb(250, 4, 4);
+    border: solid;
+
+}
+body:has(option[value="flower"]:checked) > .wraper .container .slider .item{
+    transform: rotateY(90deg);
+    background-color: rgb(250, 4, 4);
+    border: solid;
+}
+body:has(option[value="star"]:checked) > .wraper .container {
+    animation: rotating3DStar 40s ease infinite;
+}
+body:has(option[value="star"]:checked) > .wraper .container .slider{
+    width: 300px;
+    gap: unset;
+    align-items: center;
+    height: fit-content;
+}
+body:has(option[value="star"]:checked) > .wraper .container .slider .item{
+    transform: rotateY(90deg);
+    background-color: rosybrown;
+    border: solid;
+}
+@keyframes rotating3DStar {
+    0%{
+        transform: rotateX(85deg);
+    } 
+    100%{
+        transform: rotateX(45deg) rotateY(-360deg);
+    }
+    
+}
+@media (max-width:760px) {
+    .wraper{
+        flex-direction: column;
+    }
+    .container{
+        width: 70px;
+    }
+    .slider{
+        width: 700px;
+    }
+    .item{
+        width: 150px;
+
+    }
+    body:has(option[value="wheal"]:checked) > .wraper .container .slider{
+        width: 300px;
+        gap: 200px;
+    }
+    body:has(option[value="wheal"]:checked) > .wraper .container .slider .item{
+    }
+    body:has(option[value="ring"]:checked) > .wraper .container .slider{
+        width: 200px;
+        gap: 100px;
+    }
 }
