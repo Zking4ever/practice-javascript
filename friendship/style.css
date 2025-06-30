@@ -114,7 +114,7 @@ header label{
     background-color: azure;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-
+    
 }
 .moment{
     scroll-snap-align: center;
@@ -273,6 +273,11 @@ header label{
     .member{
         width: 250px;
         font-size: small;
+    }
+    .member img{
+        width: 60px;
+        height: 60px;
+        align-self: center;
     }
     .members_container button{
         padding: 0px 2px;
