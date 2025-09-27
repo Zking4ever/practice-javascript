@@ -34,13 +34,15 @@ nav{
     font-family:fantasy;
     font-size: 30px;
 }
+a{
+    cursor: pointer;
+}
 a:hover{
     color: rgb(7, 221, 244);
 }
 header label{
     display: none;
 }
-
 .home{
     display: flex;
     justify-content: center;
@@ -109,12 +111,9 @@ header label{
     height: 300px;
     display: flex;
     gap: 20px;
-    border: solid thin;
-    border-radius: 30px;
     background-color: azure;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    
 }
 .moment{
     scroll-snap-align: center;
@@ -133,7 +132,7 @@ header label{
     width: fit-content;
     height: 320px;
     overflow: hidden;
-    padding: 3px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -156,7 +155,6 @@ header label{
 }
 .member{
     max-width: 500px;
-    aspect-ratio: 3.5;
     border: solid thin;
     display: flex;
 }
@@ -165,6 +163,7 @@ header label{
     aspect-ratio: 1;
     border-radius: 50%;
     margin: 5px;
+    align-self: center;
 }
 .member_info{
     width: 70%;
@@ -189,15 +188,13 @@ header label{
 }
 
 @media(max-width:760px) {
-    header{
-        width: 77%;
-        overflow: hidden;
-    }
     #logo{
         font-size: 24px;
     }
     header label{
         display: block;
+        cursor: pointer;
+        color: white;
     }
     .home{
         height: 90vh;
@@ -205,6 +202,7 @@ header label{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-position: center;
     }
     .home div h1{
         font-size: 40px;
@@ -260,18 +258,22 @@ header label{
        color: red;
     }
     #fr-ship{
-        padding: 28px;
+        padding: 5px;
     }
     #fr-ship p{
-        font-size: 12px;
+        font-size: 13px;
+        width: 93%;
+        margin: 10px;
     }
     #members{
         flex-direction: column-reverse;
         gap: 200px;
         align-items: center;
+        width: 97%;
+        margin: auto;
     }
     .member{
-        width: 250px;
+        min-width: 250px;
         font-size: small;
     }
     .member img{
@@ -282,5 +284,10 @@ header label{
     .members_container button{
         padding: 0px 2px;
         font-size: small;
+    }
+    .member_detail .name{
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 5px;
     }
 }
